@@ -4,19 +4,19 @@ namespace HexagonalArchitecture.Application.Aggregates.EmployeeAggregate
 {
     public class Name : IValueObject
     {
-        public Name(string fistName, string lastName)
+        public Name(string firstName, string lastName)
         {
-            FistName = fistName;
+            FirstName = firstName;
             LastName = lastName;
         }
 
-        public string FistName { get; private set; }
+        public string FirstName { get; private set; }
 
         public string LastName { get; private set; }
 
         public static implicit operator string(Name name)
         {
-            return $"{name.FistName} {name.LastName}";
+            return $"{name.FirstName} {name.LastName}";
         }
     }
 }
